@@ -1,0 +1,8 @@
+-- https://programmers.co.kr/learn/courses/30/lessons/59412
+-- 입양 시각 구하기(1)
+
+SELECT HOUR(DATETIME) , COUNT(HOUR(DATETIME))
+FROM ANIMAL_OUTS
+WHERE HOUR(DATETIME) > 8
+AND HOUR(DATETIME) < 20
+GROUP BY HOUR(DATETIME)
